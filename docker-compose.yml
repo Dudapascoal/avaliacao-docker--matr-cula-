@@ -1,0 +1,13 @@
+# docker-compose.yml · ViaSerra Transportes
+services:
+  portal:
+    image: mariapascoal/viaserra-portal:1.0-26174748
+    ports:
+      - "8048:80"
+    restart: unless-stopped
+
+  manutencao:
+    build: ./manutencao
+    ports:
+      - "7048:80"
+    restart: unless-stopped
